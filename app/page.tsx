@@ -1,11 +1,12 @@
-import Body from './Body';
+import MyBody from './MyBody';
 import Header from './Header';
 
 function Page() {
   return (
     <main className="bg-gray-100">
       <Header />
-      <Body />
+      {/* @ts-ignore */}
+      <MyBody />
     </main>
   );
 }

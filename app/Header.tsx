@@ -58,10 +58,10 @@ function Header() {
 
       {/* Bottom nav */}
       <nav className="flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm">
-        <p className="link flex items-center">
+        <div className="link flex items-center">
           <Bars3Icon className="h-6 mr-1" />
           All
-        </p>
+        </div>
         <p className="link">Prime Video</p>
         <p className="link">Amazon Business</p>
         <p className="link">Today's Deals</p>
