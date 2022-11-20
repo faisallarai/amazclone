@@ -1,7 +1,7 @@
 import MyBody from './MyBody';
 import Header from './Header';
 
-function Page() {
+function Home() {
   return (
     <main className="bg-gray-100">
       <Header />
@@ -11,4 +11,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default Home;

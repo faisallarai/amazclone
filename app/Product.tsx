@@ -5,17 +5,25 @@ import { IProduct } from '../typings';
 import Currency from 'react-currency-formatter';
 import ReactStars from 'react-stars';
 import NoSSR from './NoSSR';
+import { useDispatch } from 'react-redux';
+import { addToBasket } from '../redux/basketSlice';
 
 interface IProductProps {
   product: IProduct;
 }
 
 function Product({ product }: IProductProps) {
-  const [hasPrimeDelivery, setPrimeDelivery] = useState(false);
+  const dispatch = useDispatch();
+  const [hasPrime, setHasPrime] = useState(false);
 
   useEffect(() => {
-    setPrimeDelivery(Math.random() < 0.5 ? false : true);
+    setHasPrime(Math.random() < 0.5 ? false : true);
   }, []);
+
+  const addItemToBasket = () => {
+    // send the product as an action to redux store ... the basket slice
+    dispatch(addToBasket({ ...product, hasPrime }));
+  };
 
   return (
     <section className="relative flex flex-col m-5 bg-white z-30 p-10">
@@ -54,7 +62,7 @@ function Product({ product }: IProductProps) {
         <Currency quantity={product.price} currency="GHS" />
       </div>
 
-      {hasPrimeDelivery && (
+      {hasPrime && (
         <div className="flex items-center space-x-2 -mt-5">
           <img
             loading="lazy"
@@ -66,7 +74,9 @@ function Product({ product }: IProductProps) {
         </div>
       )}
 
-      <button className="mt-auto basket">Add to basket</button>
+      <button className="mt-auto basket" onClick={addItemToBasket}>
+        Add to basket
+      </button>
     </section>
   );
 }
