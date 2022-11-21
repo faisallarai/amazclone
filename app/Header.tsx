@@ -10,9 +10,15 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { selectItems } from '../redux/basketSlice';
+import { Session } from 'next-auth';
+import { useRouter } from 'next/navigation';
 
-function Header() {
-  const { data: session } = useSession();
+interface IHeaderProps {
+  session?: Session | null;
+}
+
+function Header({ session }: IHeaderProps) {
+  const router = useRouter();
   const items = useSelector(selectItems);
 
   return (
@@ -52,10 +58,12 @@ function Header() {
             <p className="font-extrabold md:text-sm">Accounts & Lists</p>
           </div>
 
-          <div className="link">
-            <p>Returns</p>
-            <p className="font-extrabold md:text-sm">& Orders</p>
-          </div>
+          <Link href="/checkout/orders">
+            <div className="link">
+              <p>Returns</p>
+              <p className="font-extrabold md:text-sm">& Orders</p>
+            </div>
+          </Link>
 
           <Link href="/checkout">
             <div className="relative link flex items-center">

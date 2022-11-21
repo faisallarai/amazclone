@@ -171,7 +171,7 @@
 
 "@types/react-stars@^2.2.1":
   version "2.2.1"
-  resolved "https://registry.npmjs.org/@types/react-stars/-/react-stars-2.2.1.tgz"
+  resolved "https://registry.yarnpkg.com/@types/react-stars/-/react-stars-2.2.1.tgz#4a176a38e591d93557b529e00ae087dd7c467544"
   integrity sha512-x0Z7+OsImFfBbHpLm/o3Z/q9qbapQbaSbKkozSIJXs6OAkFW5keA4Qw4MOjocdmhPPUYI6DDVSB0NOm0QmY+Xg==
   dependencies:
     "@types/react" "*"
@@ -305,6 +305,11 @@ cookie@^0.5.0:
   version "0.5.0"
   resolved "https://registry.npmjs.org/cookie/-/cookie-0.5.0.tgz"
   integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
+
+crypto@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/crypto/-/crypto-1.0.1.tgz#2af1b7cad8175d24c8a1b0778255794a21803037"
+  integrity sha512-VxBKmeNcqQdiUQUW2Tzq0t377b54N2bMtXO/qiLa+6eRRmmC4qT3D4OnTGoT/U6O9aklQ/jTwbOtRMTTY8G0Ig==
 
 cssesc@^3.0.0:
   version "3.0.0"
@@ -506,6 +511,11 @@ minimist@^1.2.6:
   resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz"
   integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
 
+moment@^2.29.4:
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
+
 nanoid@^3.3.4:
   version "3.3.4"
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.4.tgz"
@@ -525,6 +535,13 @@ next-auth@^4.16.4:
     preact "^10.6.3"
     preact-render-to-string "^5.1.19"
     uuid "^8.3.2"
+
+next-connect@^1.0.0-next.3:
+  version "1.0.0-next.3"
+  resolved "https://registry.yarnpkg.com/next-connect/-/next-connect-1.0.0-next.3.tgz#d7df4ee2c54bb1808f273e1ebec308e2ffb553d2"
+  integrity sha512-i1kb8rz/3lm6z68Lnh18juHGgbgFVZXXAIiElaASGXxDZ8mJ2EVxdbTXX8NiF9BbGDBeao7u6uKMqw5ZLZg/Kg==
+  dependencies:
+    regexparam "^2.0.1"
 
 next@latest:
   version "13.0.4"
@@ -759,6 +776,11 @@ react-is@^18.0.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
+react-paystack@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/react-paystack/-/react-paystack-4.0.1.tgz#e8f2c95b24a8e02bc9cb9932cb9cd33e620afbc0"
+  integrity sha512-6bJ+kHlJZqHupnezlA96tlZh+GQc1giNesLN1vvjQ1lsK8mavjF24uyiwyewInOUSs42+9hx1eP8gZTIgHLYLg==
+
 react-redux@^8.0.5:
   version "8.0.5"
   resolved "https://registry.npmjs.org/react-redux/-/react-redux-8.0.5.tgz"
@@ -782,7 +804,7 @@ react-responsive-carousel@^3.2.23:
 
 react-stars@^2.2.5:
   version "2.2.5"
-  resolved "https://registry.npmjs.org/react-stars/-/react-stars-2.2.5.tgz"
+  resolved "https://registry.yarnpkg.com/react-stars/-/react-stars-2.2.5.tgz#911852018e1574a0f9a2c1dfa4f0bc9af071b921"
   integrity sha512-O//KS6Z9RZnUOU/r+3+wxCzNalVn/wEWIcbAQFRV3dw8WbV+ys/kgcpBPijqTiNpHGrcwZdtb/7wF/UVem20CQ==
 
 react@18.2.0:
@@ -822,6 +844,11 @@ regenerator-runtime@^0.13.10:
   version "0.13.11"
   resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz"
   integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
+
+regexparam@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/regexparam/-/regexparam-2.0.1.tgz#c912f5dae371e3798100b3c9ce22b7414d0889fa"
+  integrity sha512-zRgSaYemnNYxUv+/5SeoHI0eJIgTL/A2pUtXUPLHQxUldagouJ9p+K6IbIZ/JiQuCEv2E2B1O11SjVQy3aMCkw==
 
 reselect@^4.1.7:
   version "4.1.7"

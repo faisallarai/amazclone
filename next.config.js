@@ -20,4 +20,7 @@ module.exports = {
   experimental: {
     appDir: true,
   },
+  env: {
+    paystack_public_key: process.env.PAYSTACK_PUBLIC_KEY,
+  },
 };

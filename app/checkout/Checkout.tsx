@@ -6,9 +6,11 @@ import { selectItems, selectTotal } from '../../redux/basketSlice';
 import CheckoutProduct from './CheckoutProduct';
 import Currency from 'react-currency-formatter';
 import { useSession } from 'next-auth/react';
+import Paystack from './Paystack';
+
+const reference = new Date().getTime().toString();
 
 function Checkout() {
-  const { data: session } = useSession();
   const items = useSelector(selectItems);
   const total = useSelector(selectTotal);
 
@@ -46,16 +48,7 @@ function Checkout() {
                 <Currency quantity={total} currency="GHS" />
               </span>
             </h2>
-
-            <button
-              disabled={!session}
-              className={`basket mt-2 ${
-                !session &&
-                'from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed'
-              }`}
-            >
-              {session ? 'Proceed to checkout' : 'Sign in to checkout'}
-            </button>
+            <Paystack />
           </>
         )}
       </div>
